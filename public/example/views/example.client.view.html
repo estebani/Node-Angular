@@ -1,0 +1,14 @@
+<section ng-controller="ExampleController">
+  <div data-ng-show="!authentication.user">
+    <p><a href="/signup">Crear Cuenta</a><p>
+    <p><a href="/signin">Identificarse</a></p>
+  </div>
+  <div data-ng-show="authentication.user">
+    <h1>Hola <span data-ng-bind="authentication.user.fullName"></span></h1>
+    <a href="/signout">Cerrar Sesión</a>
+    <ul>
+      <li><p><a href="/#!/articles">Listar Artículos</a></p></li>
+      <li><p><a href="/#!/articles/create">Crear Artículo</a><p></li>
+    </ul>
+  </div>
+</section>

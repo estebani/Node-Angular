@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Usa la propiedad 'title' para renderizar un título de página  -->
+  <title><%= title %></title>
+</head>
+<body>
+    <!-- Mostrar mensajes Flash  -->
+  <% for(var i in messages) { %>
+     <div class="flash"><%= messages[i] %></div>
+  <% } %>
+
+  <!-- Renderizar el formulario signin -->
+  <form action="/send" method="get">
+
+    <div>
+      <label>dirección de correo:</label>
+      <input type="text" name="to" />
+    </div>
+    <div>
+      <input type="submit" value="enviar correo" />
+    </div>
+  </form>
+
+</body>
+</html>

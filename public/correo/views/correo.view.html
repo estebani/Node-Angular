@@ -1,0 +1,21 @@
+
+<section class="ng-scope" ng-controller="correoController">
+  <div data-ng-show="!authentication.user">
+    <div id="container">
+      <h1>envio correo</h1>
+      <input id="to" type="text" name="to" ng-model="formData.to" placeholder="Enter E-mail ID where you want to send" />
+      <input id="subject" type="text" name="subject" ng-model="formData.subject" placeholder="Write Subject" />
+      <textarea id="content" name="content" cols="40" rows="5" ng-model="formData.content" placeholder="Write what you want to send"></textarea>
+      <button id="send_email" ng-click="enviarcorreo()" >Send Email</button>
+      <span id="message"></span>
+      </div>
+  </div>
+  <div data-ng-show="authentication.user">
+    <h1>Hola <span data-ng-bind="authentication.user.fullName"></span></h1>
+    <a href="/signout">Cerrar Sesión</a>
+    <ul>
+      <li><a href="/#!/articles">Listar Artículos</a></li>
+      <li><a href="/#!/articles/create">Crear Artículo</a></li>
+    </ul>
+  </div>
+</section>
