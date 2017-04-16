@@ -213,3 +213,12 @@ exports.forgot = function(req,res){
          }
 });
 };
+
+exports.drive = function(req,res){
+    res.render('drive', {
+      // Configurar la variable title de la página
+      title: 'drive',
+      // Configurar la variable del mensaje flash
+      messages: req.flash('error') || req.flash('info')
+    });
+};

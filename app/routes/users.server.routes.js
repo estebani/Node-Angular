@@ -50,5 +50,11 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook',
   app.get('/olvidoclave',users.correo);
 
   app.get('/send',users.forgot);
+
+  //configurar ruta de correos
+  app.get('/drive', users.drive);
+
+
+   
 };
 

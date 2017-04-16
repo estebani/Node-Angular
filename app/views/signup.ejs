@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
   <!-- Usar la propiedad 'title' para renderizar un título de página  -->
   <title>
     <%=title %>
@@ -11,6 +13,7 @@
   <% for(var i in messages) { %>
     <div class="flash"><%= messages[i] %></div>
   <% } %>
+  <div id="cuerpo">
   <!-- Renderizar el formulario signup  -->
   <form action="/signup" method="post">
     <div>
@@ -36,8 +39,8 @@
     <div>
       <input type="submit" value="Crear Cuenta" />
     </div>
-  </form>
-  <p><a href="/oauth/google">Registrarse usando Google</a></p>
-  <p><a href="/auth/facebook">Registrarse usando facebook</a></p>
+
+  </form></div>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 'use strict';
 
 // Configurar la variable 'NODE_ENV'
-process.env.NODE_ENV = process.env.NODE_ENV || 'production';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var port= process.env.PORT || 3000;
 // Cargar las dependencias de módulos
 var mongoose = require('./config/mongoose'),

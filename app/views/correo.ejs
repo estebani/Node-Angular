@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
   <!-- Usa la propiedad 'title' para renderizar un título de página  -->
   <title><%= title %></title>
 </head>
@@ -9,18 +11,17 @@
   <% for(var i in messages) { %>
      <div class="flash"><%= messages[i] %></div>
   <% } %>
-
+<div id="cuerpo"
   <!-- Renderizar el formulario signin -->
   <form action="/send" method="get">
 
     <div>
-      <label>dirección de correo:</label>
+      <p><label>dirección de correo: </label>
       <input type="text" name="to" />
-    </div>
-    <div>
-      <input type="submit" value="enviar correo" />
+ 
+      <input type="submit" value="enviar correo" /></p>
     </div>
   </form>
-
+</div>
 </body>
 </html>

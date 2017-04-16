@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+
   <!-- Usa la propiedad 'title' para renderizar un título de página  -->
   <title><%= title %></title>
 </head>
@@ -9,24 +11,27 @@
   <% for(var i in messages) { %>
      <div class="flash"><%= messages[i] %></div>
   <% } %>
-
+<div id="cuerpo">
   <!-- Renderizar el formulario signin -->
   <form action="/signin" method="post">
     <div>
-      <label>Usuario:</label>
-      <input type="text" name="username" />
+      <p><label>Usuario:</label>
+      <input type="text" name="username" /></p>
     </div>
     <div>
-      <label>Contraseña:</label>
-      <input type="password" name="password" />
+      <p><label>Contraseña:</label>
+      <input type="password" name="password" /></p>
     </div>
     <div>
-      <input type="submit" value="Identificarse" />
+     <p><input type="submit" value="Identificarse" /></p>
     </div>
   </form>
-   <p><a href="/oauth/google">Identificarse usando Google</a><p>
-   <p><a href="/auth/facebook">identificarse usando facebook</a><p>
-   <p><a href="/olvidoclave">olvidó la contraseña</a><p>
+  <a href="/auth/facebook"><img src="estilos/face.png" width="100" height="60"></a>
+  <a  href="/oauth/google"><img src="estilos/google.png" width="60" height="60"></a>
+  <a class="simple" href="/olvidoclave">Enviar un correo</a>
+  </div>
+   
+   
 
 </body>
 </html>
